@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MyApp());
-}
 
-class MyApp extends StatelessWidget {
+
+class Task8 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -19,36 +17,24 @@ class ImageExample extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Assets & Network Image"),
+        title: Text("Assets & Network Image Example"),
       ),
-      body: SingleChildScrollView(
+      body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
 
-            SizedBox(height: 20),
-
             // ✅ Asset Image
-            Text("Asset Image"),
             Image.asset(
               'assets/images/myimage.jpg',
-              width: 250,
-              height: 200,
-              fit: BoxFit.cover,
-            ),
-
-            SizedBox(height: 30),
-
-            // ✅ Network Image
-            Text("Network Image"),
-            Image.network(
-              'https://picsum.photos/300/200',
-              width: 250,
+              width: 200,
               height: 200,
               fit: BoxFit.cover,
             ),
 
             SizedBox(height: 20),
+
+            Text("This is Asset Image"),
           ],
         ),
       ),
